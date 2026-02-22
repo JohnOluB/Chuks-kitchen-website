@@ -1,9 +1,11 @@
 import React from 'react'
 import BgImage from "../../assets/images/bg.png"
 import ForknKnife from '../../assets/Icons/fork-knife-fill.png'
+import Logistics from '../../assets/Icons/truck.png'
 
 const Hero = () => {
   return (    
+    <>
     <div className='flex'>
       <img src={BgImage} alt="background-image" className='w-1/2 h-[1024px]'/>
       <div className='flex-col ml-[100px]'>
@@ -17,13 +19,13 @@ const Hero = () => {
           <p className='text-base mb-[50px]'> bring the rich culinary heritage  of Nigeria right to your doorstep.</p>
           <div className='flex'>
           <div className='flex mr-[70px]'>
-            <span className='bg-[#FFE1C4] h-[37px] w-[38px] rounded-[13px] flex justify-center items-center'>
+            <span className='bg-[#FFE1C4] h-[39px] w-[38px] rounded-[13px] flex justify-center items-center'>
               <img src={ForknKnife} alt="A fork and knife icon" />
             </span>
             <span className='flex justify-center items-center ml-[10px]'>Freshly Prepared</span>
           </div>
           <div className='flex'>
-            <span className='bg-[#FFE1C4] h-[37px] w-[38px] rounded-[13px] ml-[10px] flex justify-center items-center'>
+            <span className='bg-[#FFE1C4] h-[39px] w-[38px] rounded-[13px] ml-[10px] flex justify-center items-center'>
               <img src={ForknKnife} alt="A fork and knife icon" />
             </span>
             <span className='flex justify-center items-center ml-[10px] '>Support Local Business</span>
@@ -31,17 +33,25 @@ const Hero = () => {
           </div>
 
           <div className='flex mt-[28px]'>            
-            <span className='bg-[#FFE1C4] h-[37px] w-[38px] rounded-[13px] flex justify-center items-center'>
-              <img src={ForknKnife} alt="A fork and knife icon" />
+            <span className='bg-[#FFE1C4] h-[39px] w-[38px] rounded-[13px] flex justify-center items-center'>
+              <img src={Logistics} alt="truck" />
             </span>
             <span className='flex justify-center items-center ml-[10px] '>Fast & Reliable Delivery</span>
           </div>
         </div>
         <button className='h-12 w-[500px] border-2 bg-[#FF7A18] text-white rounded-lg mt-[38px]'>Start Your Order</button><br/>
         <button className='h-12 w-[500px] border-2 border-[#1E88E5] text-[#1E88E5] rounded-lg mt-[24px]'>Learn More About Us</button>
-      </div>  
+    <p className='font-medium text-[15px] mt-[80px] flex justify-center items-center'>© 2024 Chuks Kitchen.  
+    <span className='text-[#64B5F6] ml-[12px]'>Privacy Policy</span>
+    <span className='text-[#64B5F6] ml-[12px]'>Terms of Service</span> 
+    </p>
 
+      </div>  
+      <div className='flex-col'>
+    
+      </div>
     </div>
+    </>
   )
 }
 
