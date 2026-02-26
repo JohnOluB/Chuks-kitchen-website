@@ -9,7 +9,7 @@ export default function NavBar(){
                 <span>Explore</span>
                 <span>My Orders</span>
                 <span>Account</span>
-                <button className='bg-[#FF7A18] h-[40px] w-[120px] rounded-lg text-[#ffffff]'>Login</button>
+                <button className='bg-[#FF7A18] h-[40px] w-[120px] rounded-lg text-[#ffffff] mb-4'>Login</button>
             </header>
         </div>
     )
