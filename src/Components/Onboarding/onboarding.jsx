@@ -3,16 +3,20 @@ import BgImage from "../../assets/images/bg.png"
 import ForknKnife from '../../assets/Icons/fork-knife-fill.png'
 import Logistics from '../../assets/Icons/truck.png'
 import Footer from '../Footer/Footer'
+import { useNavigate } from 'react-router-dom'// import SignIn from '../SignIn/signIn'
+
 
 const OnBoarding = () => {
+  const navigate = useNavigate()
   return (    
     <>
-    <div className='flex'>
+    <div className='flex font-[Inter]'>
       <img src={BgImage} alt="background-image" className='w-1/2 h-[1024px]'/>
       <div className='flex-col ml-[100px]'>
         <header className=' mt-[20px]'>
-            <span className='font-[Island_Moments] text-[#FF7A18] text-4xl'>Chuks Kitchen</span>                
-            <button onClick={()=>{}} className='w-36 h-12 border-2 border-[#1E88E5] rounded-lg text-base text-[#1E88E5] ml-[200px] font-medium'>Sign In</button>  
+            <span className='font-[Island_Moments] text-[#FF7A18] text-4xl'>Chuks Kitchen</span>   
+            
+              <button onClick={() => navigate('/SignIn/signIn')} className='w-36 h-12 border-2 border-[#1E88E5] rounded-lg text-base text-[#1E88E5] ml-[200px] font-medium'>Sign In</button>  
         </header>
         <div className='flex-col mt-[80px] font-[Inter]'>
           <p className='text-[32px] font-semibold'>Your Authentic Taste of Nigeria</p>
@@ -42,15 +46,12 @@ const OnBoarding = () => {
         </div>
         <button className='h-12 w-[500px] border-2 bg-[#FF7A18] text-white rounded-lg mt-[38px]'>Start Your Order</button><br/>
         <button className='h-12 w-[500px] border-2 border-[#1E88E5] text-[#1E88E5] rounded-lg mt-[24px]'>Learn More About Us</button>
-    <p className='font-medium text-[15px] mt-[80px] flex justify-center items-center'>© 2024 Chuks Kitchen.  
-    <span className='text-[#64B5F6] ml-[12px]'>Privacy Policy</span>
-    <span className='text-[#64B5F6] ml-[12px]'>Terms of Service</span> 
-    </p>
+          <p className='font-medium text-[15px] mt-[80px] flex justify-center items-center'>© 2024 Chuks Kitchen.  
+          <span className='text-[#64B5F6] ml-[12px]'>Privacy Policy</span>
+          <span className='text-[#64B5F6] ml-[12px]'>Terms of Service</span> 
+          </p>
 
       </div>  
-      <div className='flex-col'>
-    
-      </div>
     </div>
     <Footer/>
     </>

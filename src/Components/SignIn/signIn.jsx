@@ -1,17 +1,15 @@
 import React from "react";
 import BgImage from "../../assets/images/bg.png"
 import Footer from "../Footer/Footer";
+import {Link} from 'react-router-dom'
 
 export default function SignIn(){
     return(
         <div>
             <div className="flex">
-            <div>
-                <span>Chuks Kitchen</span>   
-                <p className="bg-[BgImage]"> 
-                    Your journey to delicious, authentic Nigerian meals starts here. Sign up or log in to order your favorites today!    
-                </p><img src={BgImage} alt="background-image" className='w-1/2 h-[1024px]'/>
-            </div>
+           
+                <img src={BgImage} alt="background-image" className='w-1/2 h-[1024px]'/>
+           
              <div className="m-30">
                 <span className='font-[Island_Moments] text-[#FF7A18] text-4xl flex justify-center items-center'>Chuks Kitchen</span>                
                 <p className="flex justify-center items-center mt-2">Login Your Account</p>
@@ -28,7 +26,10 @@ export default function SignIn(){
                         <input type="password" placeholder="****" required className="border-1 border-[#BDBDBD] w-[380px] p-2 rounded-lg" />
                     </div>
                         <p className="mt-1.5 ml-[267px] text-[#64B5F6]">Forgot Password?</p>
-                        <button className='h-12 w-[380px] border-2 bg-[#FF7A18] text-white rounded-lg mt-[12px] '>Continue</button>
+                        <Link to='/'>
+                            <button className='h-12 w-[380px] border-2 bg-[#FF7A18] text-white rounded-lg mt-[12px] '>Continue</button>
+                        </Link>
+                        
                 
                     <p className="mt-1.5">Or continue with</p>
                 <button className='h-12 w-[380px] border-1 border-[#BDBDBD] rounded-lg mt-[18px]'>Continue with Google</button>
