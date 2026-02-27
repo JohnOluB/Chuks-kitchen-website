@@ -20,7 +20,7 @@ export default function SignIn(){
                         <p className="mt-4 mb-1.5">
                             Email or Phone number
                         </p>
-                        <input type="email, number" required placeholder="name@gmail.com" className="border-1 border-[#BDBDBD] w-[380px] rounded-lg p-2"/><br />
+                        <input type="email, number" required placeholder="name@gmail.com" className="border border-[#BDBDBD] w-[380px] rounded-lg p-2 focus:outline-none focus:border-[#BDBDBD]"/><br />
                 
                     </div>
                     <div className="flex-col">
