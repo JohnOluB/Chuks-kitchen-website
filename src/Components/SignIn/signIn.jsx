@@ -3,6 +3,7 @@ import BgImage from "../../assets/images/bg.png"
 import Footer from "../Footer/Footer";
 import Facebook from '../../assets/Icons/facebook.png'
 import Google from '../../assets/Icons/google.png'
+import MailBox from '../../assets/Icons/mail.svg'
 import {Link} from 'react-router-dom'
 
 export default function SignIn(){
@@ -12,17 +13,22 @@ export default function SignIn(){
            
                 <img src={BgImage} alt="background-image" className='w-1/2 h-[1024px]'/>
            
-             <div className="m-30">
+             <div className="mt-[90px] ml-[130px]">
                 <span className='font-[Island_Moments] text-[#FF7A18] text-4xl flex justify-center items-center'>Chuks Kitchen</span>                
-                <p className="flex justify-center items-center mt-2 font-[500] text-[22px]">Login Your Account</p>
+                <p className="flex justify-center items-center mt-[4px] font-[500] text-[22px]">Login Your Account</p>
                 <div className="flex flex-col justify-center items-center text-[14px]">
-                    <div className="">
-                        <p className="mt-4 mb-1.5">
-                            Email or Phone number
-                        </p>
-                        <input type="email, number" required placeholder="name@gmail.com" className="border border-[#BDBDBD] w-[380px] rounded-lg p-2 focus:outline-none focus:border-[#BDBDBD]"/><br />
-                
-                    </div>
+              <div className="relative">
+  <p className="mt-4 mb-1.5">Email or Phone number</p>
+  <div className="relative">
+    <input 
+      type="text" 
+      required 
+      placeholder="name@gmail.com" 
+      className="border border-[#BDBDBD] w-[380px] rounded-lg p-2 focus:outline-none focus:border-[#BDBDBD] pl-10"
+    />
+    <img src={MailBox} alt="mail box" className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5"/>
+  </div>
+</div>
                     <div className="flex-col">
                         <p className="mt-4 mb-1.5">Password</p>
                         <input type="password" placeholder="****" required className="border-1 border-[#BDBDBD] w-[380px] p-2 rounded-lg" />
