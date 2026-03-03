@@ -4,34 +4,41 @@ import Footer from "../Footer/Footer";
 import Facebook from '../../assets/Icons/facebook.png'
 import Google from '../../assets/Icons/google.png'
 import MailBox from '../../assets/Icons/mail.svg'
+import padlock from '../../assets/Icons/padlock.svg'
+import visibility from '../../assets/Icons/visibility-off.svg'
 import {Link} from 'react-router-dom'
 
 export default function SignIn(){
     return(
         <div>
             <div className="flex font-[Inter]">
-           
-                <img src={BgImage} alt="background-image" className='w-1/2 h-[1024px]'/>
-           
+                <div className='relative w-1/2'>
+                    <img src={BgImage} alt="background-image" className='w-full object-cover h-[1024px]'/>
+                    <div className="absolute inset-0 flex flex-col justify-center items-center bg-[#FF7A18B2]">
+                        <p>Chuks Kitchen</p>
+                        <p>Your journey to delicious, authentic </p> 
+                        <p>Nigerian meals starts here. Sign up </p> 
+                        <p>or log in to order your favorites today</p>
+                    </div>
+                </div>
              <div className="mt-[90px] ml-[130px]">
                 <span className='font-[Island_Moments] text-[#FF7A18] text-4xl flex justify-center items-center'>Chuks Kitchen</span>                
                 <p className="flex justify-center items-center mt-[4px] font-[500] text-[22px]">Login Your Account</p>
-                <div className="flex flex-col justify-center items-center text-[14px]">
+                <div className="flex flex-col justify-center items-center text-[14px]"> 
               <div className="relative">
-  <p className="mt-4 mb-1.5">Email or Phone number</p>
-  <div className="relative">
-    <input 
-      type="text" 
-      required 
-      placeholder="name@gmail.com" 
-      className="border border-[#BDBDBD] w-[380px] rounded-lg p-2 focus:outline-none focus:border-[#BDBDBD] pl-10"
-    />
-    <img src={MailBox} alt="mail box" className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5"/>
-  </div>
-</div>
+                    <p className="mt-4 mb-1.5">Email or Phone number</p>
+                    <div className="relative">
+                        <input type="text" placeholder="name@gmail.com" required className="border border-[#BDBDBD] w-[380px] rounded-lg p-2 focus:outline-none focus:border-[#BDBDBD] pl-10"/>
+                        <img src={MailBox} alt="mail box" className="absolute left-3 top-1/2 -translate-y-1/2"/>
+                    </div>
+                    </div>
                     <div className="flex-col">
-                        <p className="mt-4 mb-1.5">Password</p>
-                        <input type="password" placeholder="****" required className="border-1 border-[#BDBDBD] w-[380px] p-2 rounded-lg" />
+                        <div className="relative">
+                            <p className="mt-4 mb-1.5">Password</p>
+                            <input type="password" placeholder="****" required className="border-1 border-[#BDBDBD] w-[380px] p-2 rounded-lg pl-10 pr-10 focus:outline-none" />
+                            <img src={padlock} className="absolute left-3 top-1/2 -translate-y-1/2 mt-[11px]" />
+                            <img src={visibility} className="absolute right-3 top-1/2 -translate-y-1/2 mt-[11px]"/>
+                        </div>
                     </div>
                         <p className="mt-1.5 ml-[267px] text-[#64B5F6]">Forgot Password?</p>
                         <Link to='/'>

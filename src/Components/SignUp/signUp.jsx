@@ -47,7 +47,7 @@ export default function SignUp(){
                             <p className="mt-1.5">Or continue with</p>
                             <button className='h-12 w-[380px] border-1 border-[#BDBDBD] rounded-lg mt-[18px]'>Continue with Google</button>
                             <button className='h-12 w-[380px] border-1 border-[#BDBDBD] rounded-lg mt-[18px]'>Continue with Apple</button>
-                            <p className="mt-4">Already have an account? <span className="text-[#64B5F6]">SIgn In</span></p>
+                            <p className="mt-4">Already have an account? <span className="text-[#64B5F6]">Sign In</span></p>
                         
                         </div>
                     </div>
