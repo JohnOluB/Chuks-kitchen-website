@@ -6,19 +6,23 @@ import Google from '../../assets/Icons/google.png'
 import MailBox from '../../assets/Icons/mail.svg'
 import padlock from '../../assets/Icons/padlock.svg'
 import visibility from '../../assets/Icons/visibility-off.svg'
-import {Link} from 'react-router-dom'
+import {useNavigate} from 'react-router-dom'
 
 export default function SignIn(){
+    const navigate = useNavigate()
     return(
         <div>
             <div className="flex font-[Inter]">
                 <div className='relative w-1/2'>
                     <img src={BgImage} alt="background-image" className='w-full object-cover h-[1024px]'/>
-                    <div className="absolute inset-0 flex flex-col justify-center items-center bg-[#FF7A18B2]">
-                        <p>Chuks Kitchen</p>
-                        <p>Your journey to delicious, authentic </p> 
-                        <p>Nigerian meals starts here. Sign up </p> 
-                        <p>or log in to order your favorites today</p>
+                    <div className="absolute inset-0 bg-[#FF7A18B2] text-white flex flex-col items-center">
+                        <p className="text-[40px] mt-[220px] font-[700]">Chuks Kitchen</p>
+                        <div className='text-[20px]'>
+                            <p>Your journey to delicious, authentic </p> 
+                            <p>Nigerian meals starts here. Sign up </p> 
+                            <p>or log in to order your favorites </p>
+                            <p>today!</p>
+                        </div>    
                     </div>
                 </div>
              <div className="mt-[90px] ml-[130px]">
@@ -40,12 +44,8 @@ export default function SignIn(){
                             <img src={visibility} className="absolute right-3 top-1/2 -translate-y-1/2 mt-[11px]"/>
                         </div>
                     </div>
-                        <p className="mt-1.5 ml-[267px] text-[#64B5F6]">Forgot Password?</p>
-                        <Link to='/'>
-                            <button className='h-12 w-[380px] border-2 bg-[#FF7A18] cursor-pointer text-white rounded-lg mt-[12px] '>Continue</button>
-                        </Link>
-                        
-                
+                    <p className="mt-1.5 ml-[267px] text-[#64B5F6]">Forgot Password?</p>
+                    <button onClick={() => navigate('/Hero/hero')} className='h-12 w-[380px] border-2 bg-[#FF7A18] cursor-pointer text-white rounded-lg mt-[12px] '>Continue</button>
                     <p className="mt-1.5">Or continue with</p>
                      <button className='h-12 w-[380px] border border-[#BDBDBD] rounded-lg mt-[18px] flex items-center justify-center gap-2'>
                         <img src={Google} alt="google"/>
