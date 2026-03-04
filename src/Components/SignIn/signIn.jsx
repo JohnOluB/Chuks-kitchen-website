@@ -6,7 +6,7 @@ import Google from '../../assets/Icons/google.png'
 import MailBox from '../../assets/Icons/mail.svg'
 import padlock from '../../assets/Icons/padlock.svg'
 import visibility from '../../assets/Icons/visibility-off.svg'
-import {useNavigate} from 'react-router-dom'
+import {Link, useNavigate} from 'react-router-dom'
 
 export default function SignIn(){
     const navigate = useNavigate()
@@ -45,7 +45,7 @@ export default function SignIn(){
                         </div>
                     </div>
                     <p className="mt-1.5 ml-[267px] text-[#64B5F6]">Forgot Password?</p>
-                    <button onClick={() => navigate('/Hero/hero')} className='h-12 w-[380px] border-2 bg-[#FF7A18] cursor-pointer text-white rounded-lg mt-[12px] '>Continue</button>
+                    <button onClick={() => navigate('/hero')} className='h-12 w-[380px] border-2 bg-[#FF7A18] cursor-pointer text-white rounded-lg mt-[12px] '>Continue</button>
                     <p className="mt-1.5">Or continue with</p>
                      <button className='h-12 w-[380px] border border-[#BDBDBD] rounded-lg mt-[18px] flex items-center justify-center gap-2'>
                         <img src={Google} alt="google"/>
@@ -55,7 +55,12 @@ export default function SignIn(){
                         <img src={Facebook} alt="facebook"/>
                         Continue with Apple
                     </button>
-                    <p className="mt-4">Don't have an account? <span className="text-[#64B5F6]">Create an account</span></p>
+                    <div className="flex mt-4">
+                        <p>Don't have an account? </p>
+                        <Link to="/signUp">
+                            <p className="text-[#64B5F6] ml-[4px]"> Create an account</p>
+                        </Link>
+                    </div>
                 </div>
              </div>
             </div>
