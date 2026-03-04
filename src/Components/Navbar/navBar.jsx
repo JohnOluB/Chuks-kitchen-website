@@ -1,6 +1,8 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 
 export default function NavBar(){
+    const navigate = useNavigate()
     return(
         <div>
             <header className='flex justify-evenly mt-5'>
@@ -9,7 +11,7 @@ export default function NavBar(){
                 <span>Explore</span>
                 <span>My Orders</span>
                 <span>Account</span>
-                <button className='bg-[#FF7A18] h-[40px] w-[120px] rounded-lg text-[#ffffff] mb-4'>Login</button>
+                <button onClick={() => navigate('/signIn')} className='bg-[#FF7A18] h-[40px] w-[120px] rounded-lg text-[#ffffff] mb-4'>Login</button>
             </header>
         </div>
     )
