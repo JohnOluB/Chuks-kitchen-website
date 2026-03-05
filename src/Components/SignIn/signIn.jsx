@@ -17,7 +17,7 @@ export default function SignIn(){
                     <img src={BgImage} alt="background-image" className='w-full object-cover h-[1024px]'/>
                     <div className="absolute inset-0 bg-[#FF7A18B2] text-white flex flex-col items-center">
                         <p className="text-[40px] mt-[220px] font-[700]">Chuks Kitchen</p>
-                        <div className='text-[20px]'>
+                        <div className='flex flex-col items-center text-[20px]'>
                             <p>Your journey to delicious, authentic </p> 
                             <p>Nigerian meals starts here. Sign up </p> 
                             <p>or log in to order your favorites </p>
@@ -26,8 +26,12 @@ export default function SignIn(){
                     </div>
                 </div>
              <div className="mt-[90px] ml-[130px]">
-                <span className='font-[Island_Moments] text-[#FF7A18] text-4xl flex justify-center items-center'>Chuks Kitchen</span>                
-                <p className="flex justify-center items-center mt-[4px] font-[500] text-[22px]">Login Your Account</p>
+                <span className='font-[Island_Moments] text-[#FF7A18] text-4xl flex justify-center items-center'>
+                    Chuks Kitchen
+                </span>                
+                <p className="flex justify-center items-center mt-[4px] font-[500] text-[22px]">
+                    Login Your Account
+                </p>
                 <div className="flex flex-col justify-center items-center text-[14px]"> 
               <div className="relative">
                     <p className="mt-4 mb-1.5">Email or Phone number</p>
