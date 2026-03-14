@@ -40,7 +40,7 @@ export default function Hero(){
                         <p className='text-black mt-30 text-[28px]'>Popular Categories</p>    
                         <div className='grid grid-cols-3 gap-16 mt-8'>
                             {FoodMenu.map((food)=>(
-                            <div key={food.id} className="bg-white rounded-xl overflow-hidden shadow-sm h-[300px] w-[320px] ">
+                            <div key={food.id} className="bg-white rounded-xl overflow-hidden shadow-sm h-[300px] w-[320px]">
                                 <div className=''>
                                     <img src={food.image} alt={food.name} className="w-full object-cover" />
                                     <h3 className='flex justify-center items-center mt-8 text-[17px]'>{food.name}</h3>

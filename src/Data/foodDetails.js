@@ -1,18 +1,18 @@
 import React from "react";
+import { JollofRiceEntrees } from "./foodData";
+import NavBar from "../Components/Navbar/navBar";
+import { useParams } from "react-router-dom";
 
+function foodDetails(){
+    const { id } = useParams()
+    const food = JollofRiceEntrees.find((item) => item.id === Number(id))
 
-// const foodDetails = [
-//     {
-//         id: 1
-//     }
-// ]
-
-function details(){
     return(
         <div>
+            <NavBar/>
             <p>Win</p>
         </div>
     )
 }
 
-export default details
+export default foodDetails

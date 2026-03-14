@@ -4,8 +4,11 @@ import NavBar from "../Navbar/navBar";
 import Footer from "../Footer/Footer";
 import AddIcon from '../../assets/Icons/Vector.png'
 import {PopularDishes, JollofRiceEntrees, SwallowSoups}  from "../../Data/foodData.js"
+import { useNavigate } from "react-router-dom";
 
 export default function Explore(){
+    const navigate = useNavigate()
+
     return(
         <div>
             <NavBar/>
@@ -34,7 +37,7 @@ export default function Explore(){
                 <div className="flex justify-center items-center">
                     <div className='grid grid-cols-3 gap-16 mt-8'>
                         {PopularDishes.map((dishes)=>(
-                        <div key={dishes.id} className="bg-white rounded-xl overflow-hidden shadow-sm h-[420px] w-[320px] mb-8">
+                        <div key={dishes.id} onClick={()=>navigate(`/dishes/${dishes.id}`)} className="bg-white rounded-xl overflow-hidden shadow-sm h-[420px] w-[320px] mb-8 cursor-pointer">
                             <img src={dishes.image} alt={dishes.name}  className='w-full h-[200px] object-cover'/>
                             <div className="px-4">
                                 <p className="font-[500] mt-8 text-[20px]">{dishes.name}</p>
